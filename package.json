@@ -2,7 +2,7 @@
   "name": "ajv",
   "version": "8.4.0",
   "description": "Another JSON Schema Validator",
-  "main": "dist/ajv.js",
+  "main": "dist/index.js",
   "types": "dist/ajv.d.ts",
   "files": [
     "lib/",
@@ -28,7 +28,8 @@
     "prepublish": "npm run build",
     "benchmark": "npm i && npm run build && npm link && cd ./benchmark && npm link ajv && npm i && node ./jtd",
     "docs:dev": "./scripts/prepare-site && vuepress dev docs",
-    "docs:build": "./scripts/prepare-site && vuepress build docs"
+    "docs:build": "./scripts/prepare-site && vuepress build docs",
+    "webpack:build": "webpack"
   },
   "nyc": {
     "exclude": [
@@ -60,6 +61,7 @@
     "fast-deep-equal": "^3.1.1",
     "json-schema-traverse": "^1.0.0",
     "require-from-string": "^2.0.2",
+    "ts-loader": "^9.1.2",
     "uri-js": "^4.2.2"
   },
   "devDependencies": {
@@ -101,7 +103,8 @@
     "ts-node": "^9.0.0",
     "tsify": "^5.0.2",
     "typescript": "^4.2.0",
-    "vuepress": "^1.8.2"
+    "vuepress": "^1.8.2",
+    "webpack-cli": "^4.7.0"
   },
   "collective": {
     "type": "opencollective",

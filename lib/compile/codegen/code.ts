@@ -49,7 +49,7 @@ export class _Code extends _CodeOrName {
   }
 
   get str(): string {
-    return (this._str ??= this._items.reduce((s: string, c: CodeItem) => `${s}${c}`, ""))
+    return (this._str ??= this._items.reduce((s: string, c: CodeItem) => `${s}${c}`, "") as string)
   }
 
   get names(): UsedNames {
